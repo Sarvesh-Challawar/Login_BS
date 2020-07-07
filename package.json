@@ -1,0 +1,24 @@
+{
+  "name": "login_bs",
+  "version": "1.0.0",
+  "description": "This is a login page directory",
+  "main": "index.html",
+  "scripts": {
+    "start":"npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "lite":"lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sarvesh-Challawar/Login_BS.git"
+  },
+  "author": "Sarvesh Challawar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sarvesh-Challawar/Login_BS/issues"
+  },
+  "homepage": "https://github.com/Sarvesh-Challawar/Login_BS#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
