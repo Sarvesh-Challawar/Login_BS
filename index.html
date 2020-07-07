@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+	<title>Login</title>
+</head>
+<body>
+	<div class="container">
+		<header class="jumbotron">
+			<div class="row row-header">
+				<div class="col-12 col-sm-4 align-self-center">
+					<img src="images/logo.png" class="img-fluid img-responsive" alt="logo:missing">
+				</div>
+				<div class="col col-sm-6">
+					<h1>Kohli Media LLP</h1>
+					<p>Next generation of creativity.</p>
+				</div>
+				<div class="col-12 col-sm align-self-center">
+					<a id="signUp" class="btn btn-sm btn-block btn-warning" role="button"><span class="fa fa-sign-in"></span> Sign Up</a>
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<div id="SignUp" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg" role="content">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4>Sign up</h4>
+					<button class="close" type="button" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form id="signUpForm">
+						<div class="form-group row align-items-center">
+							<label for="name" class="col-12 col-sm-2 col-form-label"><span class="fa fa-id-card"></span><strong> Name:</strong></label>
+							<div class="col col-sm-5">
+								<input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name" required/>
+							</div>
+							<div class="col col-sm-5">
+								<input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name" required/>
+							</div>
+						</div>
+						<div class="form-group row align-items-center">
+							<label for="uname" class="col-12 offset -1 col-sm-2 col-form-label"><span class="fa fa-user-circle-o"></span><strong> Username:</strong></label>
+							<div class="col-12 col-sm-5">
+								<input type="text" name="uname" class="form-control inline" id="uname" placeholder="Enter Username" required/>
+							</div>
+						</div>
+						<div class="form-group row align-items-center">
+							<label for="mail" class="col-12 col-sm-2 col-form-label"><span class="fa fa-at" aria-hidden="true"></span><strong> Email:</strong></label>
+							<div class="col-12 col-sm-9">
+								<input type="email" name="mail" class="form-control" id="mail" placeholder="Enter your Email" required/>
+							</div>
+						</div>
+						<div class="form-group row align-items-center">
+							<label for="pwd" class="col-12 col-sm-2 col-form-label"><span class="fa fa-key" aria-hidden="true"><strong> Password:</strong></label>
+							<div class="col-10 col-sm-5">
+								<input type="password" name="pwd" class="form-control" id="pwd" placeholder="Enter Password" required/>
+							</div>
+							<div class="col-1 col-sm-1">
+								<a class="btn btn-sm btn-block " role="button"><span  id="eye_btn1" class="fa fa-eye fa-lg"></span></a>
+							</div>
+							<div class="col-12 offset-2 col-sm-12">
+								<small id="passwordHelp" class="text-muted">Must be 8-20 characters long.</small>
+							</div>
+						</div>
+						<div class="form-group row align-items-center">
+							<label for="cpwd" class="col-12 col-sm-2 col-form-label"><span class="fa fa-key" aria-hidden="true"><strong> Confirm Password:</strong></label>
+							<div class="col-10 col-sm-5">
+								<input type="password" name="cpwd" class="form-control" id="cpwd" placeholder="Confirm Password" required/>
+							</div>
+							<div class="col-1 col-sm-1">
+								<a class="btn btn-sm btn-block" role="button"><span  id="eye_btn2" class="fa fa-eye fa-lg"></span></a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success">Sign In</button>
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+			</div>
+		</div>		
+	</div>
+
+	<br><br>
+	<div class="container">
+		<div class="d-flex justify-content-center">
+			<div class="card">
+				<div class="card-header">
+					<div class="row">
+						<div class="col-1">
+							<i class="fa fa-sign-in fa-lg"></i>
+						</div>
+						<div class="col-10">
+							<h3>Login Here:~</h3>
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
+					<form id="loginForm">
+						<div class="form-group row align-items-center">
+							<label for="uname" class="col-12 col-sm-4 col-form-label"><span class="fa fa-user-circle-o"></span><strong> Username:</strong></label>
+							<div class="col-12 col-sm-5">
+								<input type="text" name="uname" class="form-control inline" id="uname" placeholder="Enter Username" 	required/>
+							</div>
+						</div>
+						<div class="form-group row align-items-center">
+							<label for="pass" class="col-12 col-sm-4 col-form-label"><span class="fa fa-key" aria-hidden="true"><strong> Password:</strong></label>
+							<div class="col-10 col-sm-5">
+								<input type="password" name="pass" class="form-control" id="pass" placeholder="Enter Password" required/>
+							</div>
+							<div class="col-1 col-sm-1">
+								<a class="btn btn-sm btn-block " role="button"><span  id="eye_btn3" class="fa fa-eye fa-lg"></span></a>
+							</div>
+						</div>
+						<div class="form-group row align-items-center">
+							<div class="col-12 offset-4 col-sm-12">
+								<button type="button" class="btn btn-success">Sign In</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-center links">
+						Don't have an account?<a href="#" data-toggle="modal" data-target="#SignUp"> Sign Up</a>
+					</div>
+					<div class="d-flex justify-content-center links">
+						<a href="#"> Forgot Password?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+
+	<footer class="footer1">
+		<div class="container">
+			<div class="row">
+				<div class="col-4 col-sm-3">
+					<h5>Corporate office</h5>
+					Kohli Media LLP.<br>
+				</div>
+				<div class="col-7 col-sm-5">
+					<h5>Address</h5>
+					<address>
+						SCO 31, Sector 86<br>
+						Mohali - 160062, India.<br>
+						<i class="fa fa-phone fa-lg"></i> : +91 628 084 8783<br>
+						<i class="fa fa-envelope fa-lg"></i> : <a href="mailto:co@kohli.tel">co@kohli.tel</a>
+					</address>
+				</div>
+				<div class="col-12 col-sm-4 align-self-center">
+					<div class="text-center">
+						<a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php" target="_blank" title="FaceBook"><i class="fa fa-facebook fa-lg"></i></a>
+						<a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/" target="_blank" title="Linkedin"><i class="fa fa-linkedin fa-lg"></i></a>
+						<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter fa-lg"></i></a>
+						<a class="btn btn-social-icon btn-youtube" href="http://youtube.com/" target="_blank" title="YouTube"><i class="fa fa-youtube fa-lg"></i></a>
+						<a class="btn btn-social-icon" href="mailto:blanc@gmail.com"><i class="fa fa-envelope-o fa-lg"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-auto">
+					<p><i class="fa fa-copyright fa-sm" aria-hidden="true"></i>Copyrights</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
