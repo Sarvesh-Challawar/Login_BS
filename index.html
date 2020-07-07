@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- This is used to make a page know the height and width of the screen being viewed on -->
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Links if you have bootstrap, font awesome and bootstrap social installed on the system -->
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-social/bootstrap-social.css"> -->
+
+    <!-- Use this if you don't have the above mentioned, here we are simply using it from net -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+
+    <!-- local css file -->
     <link rel="stylesheet" type="text/css" href="styles.css">
 
 	<title>Login</title>
 </head>
 <body>
+	<!-- Jumbotron is basically the header view we can use in bootstrap -->
 	<div class="container">
 		<header class="jumbotron">
 			<div class="row row-header">
@@ -30,6 +40,7 @@
 		</header>
 	</div>
 
+	<!-- The 'Sign Up' button triggers the modal below which allows a user to register to our website -->
 	<div id="SignUp" class="modal fade" role="dialog">
 		<div class="modal-dialog modal-lg" role="content">
 			<div class="modal-content">
@@ -91,6 +102,7 @@
 		</div>		
 	</div>
 
+	<!-- Login form is being used in the form of a card here, the form comes with basic form validations -->
 	<br><br>
 	<div class="container">
 		<div class="d-flex justify-content-center">
@@ -142,6 +154,7 @@
 	</div>
 	<br><br>
 
+	<!-- The footer section gives information about the company -->
 	<footer class="footer1">
 		<div class="container">
 			<div class="row">
@@ -176,9 +189,18 @@
 		</div>
 	</footer>
 
-	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- The below are various scripts used in the page -->
+	<!-- <script src="node_modules/jquery/dist/jquery.slim.min.js"></script> -->
+    <!-- <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<!-- To enable dark mode by widget I am using the built-in javascript file -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.6/lib/darkmode-js.min.js"></script>
+
 </body>
 </html>

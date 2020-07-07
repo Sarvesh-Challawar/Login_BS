@@ -48,8 +48,3 @@ body{
 .modal-content {
     overflow:hidden;
 }
-
-.dark-mode{
-	background-color: black;
-	color: white;
-}
