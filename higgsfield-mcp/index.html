@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude x Higgsfield MCP Server</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Higgsfield MCP</span>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#advantages">Advantages</a></li>
+        <li><a href="#disadvantages">Disadvantages</a></li>
+        <li><a href="#setup">Setup</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">MCP Server Integration</div>
+      <h1 class="hero-title">
+        Claude &times; Higgsfield<br />
+        <span class="gradient-text">AI Video Generation</span>
+      </h1>
+      <p class="hero-subtitle">
+        Connect Claude's AI intelligence directly to Higgsfield's powerful video generation platform via the Model Context Protocol — enabling seamless AI-driven video creation from natural language.
+      </p>
+      <div class="hero-actions">
+        <a href="#overview" class="btn btn-primary">Explore Features</a>
+        <a href="#setup" class="btn btn-secondary">Quick Setup</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-value">20+</span>
+          <span class="stat-label">MCP Tools</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">4K</span>
+          <span class="stat-label">Max Resolution</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Real-time</span>
+          <span class="stat-label">Job Tracking</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="visual-card card-1">
+        <div class="card-icon">🎬</div>
+        <p>Generate Video</p>
+      </div>
+      <div class="visual-card card-2">
+        <div class="card-icon">🖼️</div>
+        <p>Generate Image</p>
+      </div>
+      <div class="visual-card card-3">
+        <div class="card-icon">🤖</div>
+        <p>AI Models</p>
+      </div>
+      <div class="visual-ring"></div>
+    </div>
+  </header>
+
+  <!-- Overview -->
+  <section id="overview" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Overview</span>
+        <h2>What is the Higgsfield MCP Server?</h2>
+        <p>The Higgsfield MCP Server is a Model Context Protocol integration that bridges Claude AI with Higgsfield's video and image generation APIs, enabling conversational control over professional AI media creation.</p>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="ov-icon">🔌</div>
+          <h3>MCP Protocol</h3>
+          <p>Built on Anthropic's Model Context Protocol, allowing Claude to natively call Higgsfield's API tools during conversations without any manual API interaction.</p>
+        </div>
+        <div class="overview-card">
+          <div class="ov-icon">🎥</div>
+          <h3>Video Generation</h3>
+          <p>Create cinematic videos from text prompts or images using Higgsfield's state-of-the-art diffusion models with customizable styles and parameters.</p>
+        </div>
+        <div class="overview-card">
+          <div class="ov-icon">🖼️</div>
+          <h3>Image Generation</h3>
+          <p>Generate high-quality images up to 4K resolution with diverse AI models, supporting various aspect ratios and artistic styles.</p>
+        </div>
+        <div class="overview-card">
+          <div class="ov-icon">📊</div>
+          <h3>Workspace Management</h3>
+          <p>Manage multiple workspaces, track generation jobs, view media libraries, and monitor usage and billing — all through natural conversation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Architecture</span>
+        <h2>How It Works</h2>
+        <p>The MCP server acts as a translator between Claude's language understanding and Higgsfield's generation capabilities.</p>
+      </div>
+      <div class="flow-diagram">
+        <div class="flow-step">
+          <div class="flow-icon">💬</div>
+          <h4>1. User Prompt</h4>
+          <p>You describe what you want in plain English to Claude</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">🧠</div>
+          <h4>2. Claude Processes</h4>
+          <p>Claude interprets intent and selects the appropriate MCP tool</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">⚡</div>
+          <h4>3. MCP Server</h4>
+          <p>The server translates the request and calls Higgsfield's API</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">🎬</div>
+          <h4>4. Media Delivered</h4>
+          <p>Generated video or image is returned and displayed in context</p>
+        </div>
+      </div>
+      <div class="code-block">
+        <div class="code-header">
+          <span class="code-dot red"></span>
+          <span class="code-dot yellow"></span>
+          <span class="code-dot green"></span>
+          <span class="code-title">MCP Config (claude_desktop_config.json)</span>
+        </div>
+        <pre><code>{
+  "mcpServers": {
+    "higgsfield": {
+      "command": "npx",
+      "args": ["-y", "higgsfield-mcp"],
+      "env": {
+        "HIGGSFIELD_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section id="tools" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Capabilities</span>
+        <h2>Available MCP Tools</h2>
+        <p>The server exposes a comprehensive set of tools that Claude can invoke during conversations.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-category">
+          <h3 class="category-title">
+            <span class="cat-icon">🎬</span> Video Tools
+          </h3>
+          <ul class="tool-list">
+            <li><code>generate_video</code> — Create video from text prompt</li>
+            <li><code>job_display</code> — Track generation job status</li>
+            <li><code>show_generations</code> — View past video outputs</li>
+            <li><code>media_confirm</code> — Confirm and save media</li>
+          </ul>
+        </div>
+        <div class="tool-category">
+          <h3 class="category-title">
+            <span class="cat-icon">🖼️</span> Image Tools
+          </h3>
+          <ul class="tool-list">
+            <li><code>generate_image</code> — Create image from prompt</li>
+            <li><code>show_medias</code> — Browse media library</li>
+            <li><code>media_upload</code> — Upload reference images</li>
+            <li><code>show_marketing_studio</code> — Access studio assets</li>
+          </ul>
+        </div>
+        <div class="tool-category">
+          <h3 class="category-title">
+            <span class="cat-icon">🏢</span> Workspace Tools
+          </h3>
+          <ul class="tool-list">
+            <li><code>list_workspaces</code> — List all workspaces</li>
+            <li><code>select_workspace</code> — Switch active workspace</li>
+            <li><code>balance</code> — Check credit balance</li>
+            <li><code>transactions</code> — View billing history</li>
+          </ul>
+        </div>
+        <div class="tool-category">
+          <h3 class="category-title">
+            <span class="cat-icon">🔍</span> Discovery Tools
+          </h3>
+          <ul class="tool-list">
+            <li><code>models_explore</code> — Browse available AI models</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages -->
+  <section id="advantages" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Pros</span>
+        <h2>Advantages</h2>
+        <p>Why the Higgsfield MCP integration is a powerful choice for AI-driven media creation.</p>
+      </div>
+      <div class="pros-cons-grid">
+        <div class="pro-card">
+          <div class="pro-icon">🗣️</div>
+          <h3>Natural Language Control</h3>
+          <p>No API knowledge required — describe your vision in plain English and Claude orchestrates the entire generation pipeline automatically.</p>
+        </div>
+        <div class="pro-card">
+          <div class="pro-icon">🔄</div>
+          <h3>Seamless Iteration</h3>
+          <p>Refine your media through conversation. Request variations, adjust styles, or tweak parameters without leaving the chat interface.</p>
+        </div>
+        <div class="pro-card">
+          <div class="pro-icon">🧩</div>
+          <h3>Unified Workflow</h3>
+          <p>Combine Claude's text and reasoning capabilities with Higgsfield's generation — write scripts, generate visuals, and review outputs in one session.</p>
+        </div>
+        <div class="pro-card">
+          <div class="pro-icon">⚡</div>
+          <h3>Real-time Job Tracking</h3>
+          <p>Monitor generation progress live. Claude can poll job status and notify you when media is ready without manual checking.</p>
+        </div>
+        <div class="pro-card">
+          <div class="pro-icon">🎨</div>
+          <h3>Rich Model Selection</h3>
+          <p>Access Higgsfield's full model library — from cinematic styles to photorealistic rendering — all surfaced through the <code>models_explore</code> tool.</p>
+        </div>
+        <div class="pro-card">
+          <div class="pro-icon">🔒</div>
+          <h3>Secure API Handling</h3>
+          <p>API keys stay in environment variables and are never exposed in conversations. The MCP server manages all authentication securely.</p>
+        </div>
+        <div class="pro-card">
+          <div class="pro-icon">📱</div>
+          <h3>Cross-Platform</h3>
+          <p>Works with Claude Desktop, Claude Code CLI, and any MCP-compatible client — desktop, web, and mobile workflows all supported.</p>
+        </div>
+        <div class="pro-card">
+          <div class="pro-icon">💰</div>
+          <h3>Built-in Billing Visibility</h3>
+          <p>Check balances and transaction history directly in conversation, keeping cost management transparent without switching dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disadvantages -->
+  <section id="disadvantages" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cons</span>
+        <h2>Disadvantages &amp; Limitations</h2>
+        <p>Understanding the trade-offs helps set correct expectations for production use.</p>
+      </div>
+      <div class="cons-list">
+        <div class="con-item">
+          <div class="con-icon">⏳</div>
+          <div class="con-content">
+            <h3>Generation Latency</h3>
+            <p>Video generation can take minutes. Long-running jobs may cause Claude's context window to time out before completion, requiring manual follow-up polling.</p>
+          </div>
+        </div>
+        <div class="con-item">
+          <div class="con-icon">💸</div>
+          <div class="con-content">
+            <h3>Credit Consumption</h3>
+            <p>Each generation costs Higgsfield credits. Iterative workflows through conversation can quickly consume credits, especially for high-resolution video output.</p>
+          </div>
+        </div>
+        <div class="con-item">
+          <div class="con-icon">🔧</div>
+          <div class="con-content">
+            <h3>Setup Complexity</h3>
+            <p>Requires Node.js, a valid Higgsfield API key, and proper MCP configuration. Non-technical users may find the initial setup process challenging.</p>
+          </div>
+        </div>
+        <div class="con-item">
+          <div class="con-icon">🌐</div>
+          <div class="con-content">
+            <h3>Network Dependency</h3>
+            <p>Both Claude and Higgsfield require active internet connections. Offline workflows are not possible, and API downtime affects both services simultaneously.</p>
+          </div>
+        </div>
+        <div class="con-item">
+          <div class="con-icon">🎛️</div>
+          <div class="con-content">
+            <h3>Limited Fine-grained Control</h3>
+            <p>Advanced parameters exposed by the raw Higgsfield API may not be fully surfaced through MCP tools, limiting precise technical control for power users.</p>
+          </div>
+        </div>
+        <div class="con-item">
+          <div class="con-icon">📦</div>
+          <div class="con-content">
+            <h3>Context Window Constraints</h3>
+            <p>Large media outputs and metadata returned by tools consume Claude's context window, potentially compressing earlier conversation history in long sessions.</p>
+          </div>
+        </div>
+        <div class="con-item">
+          <div class="con-icon">🔗</div>
+          <div class="con-content">
+            <h3>Vendor Lock-in</h3>
+            <p>The integration is tightly coupled to Higgsfield's platform. Switching to another video generation service would require a different MCP server implementation.</p>
+          </div>
+        </div>
+        <div class="con-item">
+          <div class="con-icon">🧪</div>
+          <div class="con-content">
+            <h3>Early-stage Ecosystem</h3>
+            <p>MCP is a relatively new protocol. Edge cases, bugs, and breaking API changes may require periodic server updates and maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Setup -->
+  <section id="setup" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Getting Started</span>
+        <h2>Quick Setup Guide</h2>
+        <p>Get the Higgsfield MCP server running with Claude in a few steps.</p>
+      </div>
+      <div class="setup-steps">
+        <div class="setup-step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Get Your API Key</h3>
+            <p>Sign up at Higgsfield AI and generate an API key from your dashboard settings.</p>
+            <div class="step-code">
+              <code>Settings → API Keys → Generate New Key</code>
+            </div>
+          </div>
+        </div>
+        <div class="setup-step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Install via NPX</h3>
+            <p>The MCP server is available as an npm package. No global install required.</p>
+            <div class="step-code">
+              <code>npx -y higgsfield-mcp</code>
+            </div>
+          </div>
+        </div>
+        <div class="setup-step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Configure Claude Desktop</h3>
+            <p>Add the server block to your Claude Desktop configuration file.</p>
+            <div class="step-code">
+              <code>~/.claude/claude_desktop_config.json</code>
+            </div>
+          </div>
+        </div>
+        <div class="setup-step">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Start Generating</h3>
+            <p>Restart Claude Desktop and start prompting. Try: <em>"Generate a cinematic sunset video over the ocean."</em></p>
+            <div class="step-code">
+              <code>Restart Claude → Chat → Generate!</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Comparison</span>
+        <h2>MCP vs Direct API</h2>
+        <p>How the MCP integration compares to calling the Higgsfield API directly.</p>
+      </div>
+      <div class="table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th class="highlight-col">MCP Integration</th>
+              <th>Direct API</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Setup required</td>
+              <td class="highlight-col">MCP config only</td>
+              <td>Full SDK + auth code</td>
+            </tr>
+            <tr>
+              <td>Interface</td>
+              <td class="highlight-col">Natural language</td>
+              <td>Code / REST calls</td>
+            </tr>
+            <tr>
+              <td>Iteration speed</td>
+              <td class="highlight-col">Conversational</td>
+              <td>Manual code changes</td>
+            </tr>
+            <tr>
+              <td>Parameter control</td>
+              <td class="highlight-col">Moderate</td>
+              <td>Full control</td>
+            </tr>
+            <tr>
+              <td>Technical skill needed</td>
+              <td class="highlight-col">Low</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>Automation / scripting</td>
+              <td class="highlight-col">Limited</td>
+              <td>Fully scriptable</td>
+            </tr>
+            <tr>
+              <td>Context-aware decisions</td>
+              <td class="highlight-col">Yes (Claude)</td>
+              <td>Manual</td>
+            </tr>
+            <tr>
+              <td>Cost transparency</td>
+              <td class="highlight-col">In-conversation</td>
+              <td>Dashboard only</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">Higgsfield MCP</span>
+        </div>
+        <p class="footer-desc">Bridging Claude AI and Higgsfield video generation through the Model Context Protocol.</p>
+        <div class="footer-links">
+          <a href="#overview">Overview</a>
+          <a href="#tools">Tools</a>
+          <a href="#advantages">Advantages</a>
+          <a href="#disadvantages">Limitations</a>
+          <a href="#setup">Setup</a>
+        </div>
+        <p class="footer-copy">&copy; 2025 Higgsfield MCP Info. Built for educational purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
